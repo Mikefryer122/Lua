@@ -7,8 +7,8 @@ from os import system
 import subprocess
 import shutil
 
-token = "yourtoken"
-channel_id = 0000000000000
+token = "MTAzNTA3MDgwNzY4NjI1ODcyMA.GePatx.37IiNXUhjuK3lgtdr0j_OQxAXI4zDpEJ5679YI"
+channel_id = 1035072898852982814
 
 file_path = os.path.abspath(os.path.dirname(__file__))
 
@@ -63,7 +63,7 @@ def obfuscation(path, author):
 @bot.event
 async def on_ready():
     print(f"{bot.user} is online ✔️")
-    await bot.change_presence(status=discord.Status.online, activity=discord.Game(name="yunglean_#4171 lua obfuscator"))
+    await bot.change_presence(status=discord.Status.online, activity=discord.Game(name="Home Of The Menace lua obfuscator"))
 
 @bot.event
 async def on_message(message):
@@ -98,7 +98,7 @@ async def on_message(message):
 
                         open(path, "wb").write(response.content)
                         obfuscation(path, author)
-                        embed=discord.Embed(title="File has been obfuscated", color=0x3357FF)
+                        embed=discord.Embed(title="File has been obfuscated HOTM Loves you <3", color=0x3357FF)
                         await channel.send(embed=embed, file=discord.File(f"{file_path}\\obfuscated\\{author}-obfuscated.lua"))
     except:
         pass
